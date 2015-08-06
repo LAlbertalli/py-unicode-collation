@@ -1,4 +1,6 @@
 # py-unicode-collation
+![Travis-ci](https://travis-ci.org/LAlbertalli/py-unicode-collation.svg?branch=master)
+
 Library of helper functions for Python to easily support string collation.
 
 ## Rationale
