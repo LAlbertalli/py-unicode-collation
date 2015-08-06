@@ -7,15 +7,16 @@ from setuptools import setup, find_packages
 import sys
 
 if sys.version[0] == '2':
-    package_dir = {'': 'unicode_col'}
+    package_dir = {'unicode_col': 'unicode_col'}
     tests = 'tests'
 else:
-    package_dir = {'': 'unicode_col3'}
+    package_dir = {'unicode_col': 'unicode_col3'}
     tests = 'tests3'
 
 setup(
     name = "unicode_col",
     version = "0.1",
+    packages = ['unicode_col'],
     package_dir = package_dir,
     description = 'Python Unicode Collation utilities',
     author = 'Luca Albertalli',
