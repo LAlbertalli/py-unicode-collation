@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf8 -*-
 import unittest
-from unicode_col import unicode_set
+from unicode_col3 import unicode_set
 
 class TestUnicodeSet(unittest.TestCase):
     def setUp(self):

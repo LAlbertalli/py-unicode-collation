@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf8 -*-
 import unittest
-from unicode_col import unicode_dict, unicode_defaultdict
+from unicode_col3 import unicode_dict, unicode_defaultdict
 
 class TestUnicodeDict(unittest.TestCase):
     def setUp(self):

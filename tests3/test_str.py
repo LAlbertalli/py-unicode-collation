@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf8 -*-
 import unittest
-from unicode_col import UnicodeStrFactory
+from unicode_col3 import UnicodeStrFactory
 
 class TestUnicodeDict(unittest.TestCase):
     def setUp(self):
