@@ -145,6 +145,8 @@ class unicode_str_base(str):
     def __getitem__(self, index):
         '''x.__getitem__(y) <==> x[y]
         '''
+        if isinstance(index,slice):
+            return self.__getslice__(index.start,index.stop)
         if index < 0:
             index += len(self)
         if not 0 <= index < len(self):
@@ -167,15 +169,15 @@ class unicode_str_base(str):
         if start >= stop:
             return self.__class__("") #shortcut
         x = 0
-        while self._factory.coll_len(str.__getslice__(self,0,x)) <= start:
+        while self._factory.coll_len(str.__getitem__(self,slice(0,x))) <= start:
             x+=1
         if stop == len(self):
             y = sys.maxsize
         else:
             y = 0
-            while self._factory.coll_len(str.__getslice__(self,0,y)) < stop:
+            while self._factory.coll_len(str.__getitem__(self,slice(0,y))) < stop:
                 y+=1
-        return self.__class__(str.__getslice__(self,x-1,y))
+        return self.__class__(str.__getitem__(self,slice(x-1,y)))
 
     def __mod__(self,x):
         '''x.__mod__(y) <==> x%y
