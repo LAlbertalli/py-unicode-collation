@@ -6,7 +6,7 @@
 from setuptools import setup, find_packages
 import sys
 
-if sys.version[0] == 2:
+if sys.version[0] == '2':
     package_dir = {'': 'unicode_col'}
     tests = 'tests'
 else:
