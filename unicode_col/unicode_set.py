@@ -61,18 +61,6 @@ class unicode_set(set):
             self.comparison_level == other.comparison_level and \
             self.case_sensitive == other.case_sensitive
 
-    # LA: Code for EC
-
-    # def get_stored_version(self, val):
-    #     ''' Return the stored version of val if exists
-
-    #     Raise an exception if the key is not in the set
-    #     '''
-    #     try:
-    #         return self.__values[self.__in_key(val)]
-    #     except KeyError:
-    #         raise KeyError("The key %s is not in the set"%val)
-
     def add(self,val):
         '''Add an element to a set.
         
